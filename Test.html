@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    
+    <script>
+        function setCookie(cname,cvalue,exdays) {
+          const d = new Date();
+          d.setTime(d.getTime() + (exdays*24*60*60*1000));
+          let expires = "expires=" + d.toUTCString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        
+        function getCookie(cname) {
+          let name = cname + "=";
+          let decodedCookie = decodeURIComponent(document.cookie);
+          let ca = decodedCookie.split(';');
+          for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        
+        function checkCookie() {
+          let user = getCookie("username");
+          if (user != "") {
+            alert("Welcome again " + user);
+          } else {
+             user = prompt("Please enter your name:","");
+             if (user != "" && user != null) {
+               setCookie("username", user, 30);
+             }
+          }
+        }
+        </script>
+
+
+</head>
+<style>
+    .navigation{
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    P {
+        background-image: url('pic.jpg');
+    }
+    .text{
+        display: flex;
+        justify-content: space-around;
+        margin-left: 9px;
+
+    }
+    .pictue{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 0px;
+        align-items: baseline;
+        margin-left: 2px;
+    }
+    .vorstellung{
+        color: black;
+    }
+    .a{
+        margin-left: 20px;
+        margin-right: 40px;
+    }
+    a:hover{
+        text-decoration: overline;
+        color: white;
+    }
+    .karte{
+      margin-left: 2px;
+    }
+    .unten{
+      justify-content: space-around;
+      align-items: center;
+    }
+    .suchen{
+      justify-content: space-around;
+      align-items: center;
+      display: flex;
+      margin-left: 265px;
+      background-color: aquamarine;
+    }
+    @media(max-width: 650px){
+    form{
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+    .inputs_container{
+        margin: 80px;
+    }
+    h1{
+        font-size: 32px;
+    }
+}
+
+.Links{
+  margin-right: 10px;
+}
+.responsive {
+  width: 100%;
+  max-width: 400px
+
+  
+}
+
+
+
+
+
+
+</style>
+<body onload="checkCookie()"></body>
+<body>
+    <onload="checkCookie()">
+    <div class="navigation">
+        <h1> Lingen</h1>
+        <div class="Links">
+        <a href="Abou Us.html">About Us |</a>
+        <a href="Kontakt.html">Kontakt |</a>
+        <a href="Wetterdaten.html">Wetter</a>
+        <a href="Login.html">Login |</a>
+        <a href="Team.html">Team</a>
+        </div>
+    </div>
+        <div class="text">
+            <div class="pictue">
+            <img src="pic.jpg" alt="Italian Trullti" style="width:800px" class="responsive">
+            </div>
+
+            <div class="vorstellung">
+            <h2>Hallo,<br>
+            Wir sind die Aspirion Programmierer.<br>
+            !!!Und kommen aus Niedersachsen!!</h2>
+            <button onclick="myFunction()">Dark Mode</button>
+            <br>
+            Bei fragen gerne Stellen, Kontakt <br>
+            in unserem About Us verlinkt.
+
+
+<script>
+function myFunction() {
+  alert("Diese Funktion ist in Arbeit");
+}
+</script>
+
+            
+            </div>
+        </div>
+          <div class="unten">
+
+            <div class="suchen">
+      <div class="karte">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482847.784863591!2d6.883428995019023!3d52.57583122563991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b091e3f3933465%3A0x126cf7763027900!2sNiedersachsen!5e0!3m2!1sde!2sde!4v1651595663733!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+      </div>
+
+      <div>
+        <h3>
+        Wir sind momentan immer noch auf der Suche nach Verstärkung,  <br>
+        vorallem auch im Design bereich. Aber sonst auch für <br> 
+        Web, App, Datenbank Entwicklung. 
+        </h3>
+      </div>
+      </div>
+      <a class="weatherwidget-io" href="https://forecast7.com/de/52d649d85/lower-saxony/" data-label_1="NIEDERSACHSEN" data-label_2="Wetter" data-icons="Climacons Animated" data-theme="dark" >NIEDERSACHSEN Wetter</a>
+     
+     
+     <script>
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+      </script>
+
+
+
+      </div>
+
+
+
+        
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfilio von Jonas</title>
+</head>
+<style>
+    .headline{
+        color: black;
+        background-color: gray;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        text-underline-offset: hi;
+        margin-right: 1500px;
+
+    }
+    .navigation{
+        background-color: gray;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        color: aquamarine;
+        
+    }
+    .story{
+        color: red;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+    
+    }
+    P{
+        background-color: black;
+    }
+
+    a:hover{
+        text-decoration: overline;
+        color: white;
+    }
+    .text{
+        color: red;
+        margin-right: 900px;
+        font-size: 20px;
+    }
+    @media(max-width: 650px){
+    form{
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+    .inputs_container{
+        margin: 80px;
+    }
+    h1{
+        font-size: 32px;
+    }
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.Editor{
+    color: red;
+    background-color: gray;
+}
+.prog{
+
+    margin-left: 10px;
+    font-size: 15px;
+}
+</style>
+<body>
+
+    <div class="navigation">
+    <h1 class="headline">
+        Jonas Döring
+
+    </h1>
+
+    <a href="#">Website</a>
+    <a href="#">Web App's</a>
+    <button onclick="myFunction()">Dark Mode</button>
+    </div>
+
+
+
+    <div class="story">
+
+        <div class="text">
+        Jonas Döring, <br>
+        hallo ich bin hobby Software Entwickler und <br>
+        baue Website's für mich als auch für Freunde <br>
+        und auch für den Schulalltag, darunter zählt mein <br>
+        eigener Hausaufgaben Manager sowie meine eigene Stunden <br>
+        zusammenfassungs Web App.
+        </div>
+
+
+        
+        <div class="Editor">
+        <a href="https://code.visualstudio.com/" onclick="Seitecode(this.href); return false">
+            Meine Code Editor
+          </a>
+
+          <script>
+            function Seitecode (url) {
+               fenster = window.open(url, "fenster1", "width=600,height=400,status=yes,scrollbars=yes,resizable=yes");
+               fenster.focus();
+            }
+            </script>
+
+            </div>
+
+
+    </div>
+
+    <div class="prog">
+    <h2>Meine Programmiersprachen:</h2>
+            -JavaScript <br>
+            -HTML <br>
+            -CSS <br>
+            -Java <br>
+
+            </div>
+        
+
+    <script>
+            
+    function myFunction() {
+         var element = document.body;
+        element.classList.toggle("dark-mode");
+}
+    </script>
+</body>
+</html>
